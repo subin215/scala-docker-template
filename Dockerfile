@@ -2,12 +2,12 @@ FROM java:latest
 
 MAINTAINER subinsapkota@gmail.com
 
-ADD project-1.0-SNAPSHOT.zip /
+ADD <yourProjectName>.zip /
 
-RUN unzip project-1.0-SNAPSHOT.zip \
-	&& rm project-1.0-SNAPSHOT.zip
+RUN unzip <yourProjectName>.zip \
+	&& rm <yourProjectName>.zip
 
-WORKDIR /project-1.0-SNAPSHOT
+WORKDIR /<yourProjectName>
 
 RUN ["chown", "-R", "daemon", "."]
 
